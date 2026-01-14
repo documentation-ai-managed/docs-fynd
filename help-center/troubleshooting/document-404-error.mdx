@@ -1,0 +1,27 @@
+---
+title: Document Not Found (404 Error)
+description: Resolve 404 errors in Fynd Trail Documentation.
+---
+
+## Symptoms
+
+- API returns 404 Not Found
+- Documentation URL inaccessible
+
+## Common Causes
+
+- Incorrect document ID
+- Document no longer exists
+
+## Solution
+
+<Steps>
+  <Step title="Verify Document ID">
+    ````bash
+    curl https://trail.fynd.com/api/docs/{document_id}
+    ````
+  </Step>
+  <Step title="Check Dashboard">
+    Ensure the document appears in your Trail Documentation dashboard.
+  </Step>
+</Steps>

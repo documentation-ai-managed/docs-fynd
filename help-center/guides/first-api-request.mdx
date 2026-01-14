@@ -1,0 +1,25 @@
+---
+title: Your First API Request
+description: How to make an initial API request using Fynd Trail Documentation.
+---
+
+## Overview
+
+Send your first request to fetch a document using Trail API.
+
+## Steps
+
+<Steps>
+  <Step title="Get your API key">
+    Retrieve from the Fynd partner dashboard under **Trail Documentation**.
+  </Step>
+  <Step title="Make a request">
+    ````bash
+    curl -H "Authorization: Bearer YOUR_API_KEY" \
+         https://trail.fynd.com/api/docs/{document_id}
+    ````
+  </Step>
+  <Step title="View the response">
+    Successful response returns the document content in JSON.
+  </Step>
+</Steps>

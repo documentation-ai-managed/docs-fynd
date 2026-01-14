@@ -1,0 +1,114 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Fynd, ensuring you stay informed on new features and fixes.
+---
+
+## Recent Updates
+
+Stay current with Fynd's evolution. You receive automatic notifications for major releases through your dashboard at `https://dashboard.example.com`. Review changes below to understand impacts on your integration.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Introduce real-time analytics dashboard for monitoring API usage and performance metrics in real time.
+- Add webhook support for event-driven notifications, including `user.signup` and `payment.failed` events.
+
+## Improvements
+
+- Optimize query performance by `>30%` for high-volume endpoints.
+- Enhance error messages with detailed debugging information.
+
+## Bug Fixes
+
+- Resolve intermittent authentication failures during peak hours.
+- Fix pagination issues in list endpoints returning incomplete results.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Launch multi-factor authentication (MFA) integration with TOTP providers.
+- Enable custom domain mapping for your branded dashboard.
+
+## Improvements
+
+- Streamline SDK initialization with automatic token refresh.
+- Update documentation with interactive API playground.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Remove deprecated `legacy` authentication endpoint; migrate to OAuth 2.0.
+- Change default rate limit from `{1000}` to `{500}` requests per minute.
+
+## New Features
+
+- Core API launch with user management, payments, and analytics endpoints.
+- SDKs for JavaScript, Python, and Go.
+
+## Initial Setup
+
+- Bootstrap your integration with the new client libraries.
+
+</Update>
+
+## Version Summary
+
+| Version | Date       | Key Changes                  | Tags              |
+|---------|------------|------------------------------|-------------------|
+| v1.2.0  | 2024-10-15 | Analytics, webhooks          | feature, bugfix   |
+| v1.1.0  | 2024-09-20 | MFA, custom domains          | feature           |
+| v1.0.0  | 2024-08-10 | Core API, SDKs               | breaking, feature |
+
+<Callout kind="tip">
+Check your current version via the API: `GET /v1/status`. Upgrade promptly to access security fixes and new capabilities.
+</Callout>
+
+## Upgrading to the Latest Version
+
+Follow these steps to update your Fynd integration seamlessly.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+    Review breaking changes in the release notes above.
+  </Step>
+  <Step title="Update SDK" icon="download">
+    <CodeGroup tabs="JavaScript,Python">
+````javascript
+npm install @fynd/sdk@latest
+````
+````python
+pip install fynd-sdk==1.2.0
+````
+    </CodeGroup>
+  </Step>
+  <Step title="Test Endpoints" icon="play">
+    Run your test suite against `https://api.example.com/v1`.
+  </Step>
+  <Step title="Deploy" icon="rocket">
+    Monitor for errors using the new real-time dashboard.
+  </Step>
+</Steps>
+
+## Upcoming Roadmap
+
+Discover what's next for Fynd. Prioritize features based on your feedback.
+
+<Columns cols={2}>
+  <Card title="Q4 2024" icon="zap" href="#roadmap-q4">
+    AI-powered insights and GraphQL API support.
+  </Card>
+  <Card title="Q1 2025" icon="trending-up" href="#roadmap-q1">
+    Enterprise SSO and advanced role-based access control.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed Roadmap" default-open="false">
+  Share your feature requests at `support@example.com`.
+</Expandable>
